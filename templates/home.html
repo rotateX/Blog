@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="post">
+        {% for post in article_objs_list %}
+{#            {% if post.status == 'p' %}#}
+                <section class="post">
+                    <header class="post">
+                        <h2 class="post-title"><a href="{% url 'post' id=post.id %}">{{ post.title }}</a></h2>
+                        <p class="post-meta">
+                            发布时间：<a class="post-author">{{ post.pub_time}}</a>&nbsp;&nbsp;
+                            分类：<a class="post-category post-category-pure" href="#">{{ post.category }}</a>&nbsp;&nbsp;
+                            标签：
+                            {% for tag in post.tag.all %}
+                                <a class="post-category post-category-pure" href="#">{{ tag }}</a>
+                            {% endfor %}&nbsp;&nbsp;
+                            浏览次数：{{ post.views }}
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p>
+                            {{ post.content|truncatewords_html:100 }}
+                        </p>
+                    </div>
+                    <div><a class="post-category post-category-design" href="{% url 'post' id=post.id %}">阅读全文</a></div>
+                </section>
+
+{#            {% endif %}#}
+        {% endfor %}
+
+    </div>
+    {% if article_objs_list.object_list and article_objs_list.paginator.num_pages > 1 %}
+        <div>
+            {% if article_objs_list.has_previous %}
+                <a class="footer" href="?page={{ article_objs_list.previous_page_number }}">
+                    <i class="fa fa-angle-left"></i>&nbsp;&nbsp;上一页
+                </a>
+            {% endif %}
+            {% if article_objs_list.has_next %}
+                <a class="footer" href="?page={{ article_objs_list.next_page_number }}">
+                    下一页&nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+                </a>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}
