@@ -27,9 +27,11 @@ def detail(request, id):
         post = Article.objects.get(id=str(id))
         post.up_view()  # 更新浏览次数
         tags = post.tag.all()  # 获取文章对应所有标签
+        next_aticle = post.next_aticle()
+        pre_aticle = post.pre_aticle()
     except Article.DoesNotExist:
         raise Http404
-    return render(request, 'post.html', {'post': post, 'tags': tags})
+    return render(request, 'post.html', {'post': post, 'tags': tags, 'next_aticle':next_aticle, 'pre_aticle':pre_aticle})
 
 
 
