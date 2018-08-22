@@ -27,6 +27,10 @@ urlpatterns = [
     path('home/', blog_views.home, name='home'),
     path('articles/<int:id>/', blog_views.detail, name='post'),
     path('summernote/', include('django_summernote.urls')),
+    path('archives/<str:year>/<str:month>', blog_views.archives, name='archives')
+    # path('jet/', include('jet.urls', 'jet')),
+    # path('jet/dashboard', include('jet.dashboard.urls', 'jet-dashboard')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

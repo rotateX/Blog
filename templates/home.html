@@ -30,13 +30,20 @@
         {% endfor %}
 
     </div>
-    {% if article_objs_list.object_list and article_objs_list.paginator.num_pages > 1 %}
+    {% if article_objs_list.object_list and article_pages.num_pages > 1 %}
         <div>
             {% if article_objs_list.has_previous %}
                 <a class="footer" href="?page={{ article_objs_list.previous_page_number }}">
                     <i class="fa fa-angle-left"></i>&nbsp;&nbsp;上一页
                 </a>
             {% endif %}
+            {% for i in article_pages.page_range %}
+                {% if article_objs_list.number == i %}
+                    <a href="?page={{ i }}" style="color: #2B333D">{{ i }}</a>
+                {% else %}
+                    <a href="?page={{ i }}">{{ i }}</a>
+                {% endif %}
+            {% endfor %}
             {% if article_objs_list.has_next %}
                 <a class="footer" href="?page={{ article_objs_list.next_page_number }}">
                     下一页&nbsp;&nbsp;<i class="fa fa-angle-right"></i>

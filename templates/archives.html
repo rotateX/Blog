@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="content-subhead">归档:&nbsp;{{ year_month }}</h1>
+    <div class="blog-post">
+        {% for post in article_list %}
+            <div class="post-container">
+                <section class="post">
+                    <header class="post-header">
+                        <img width="48" height="48" alt="Tilo Mitra's avatar" class="post-avatar"
+                             src='{% static 'image/avatar.png' %}'>
+                        <h2 class="post-title"><a href="{% url 'post' id=post.id %}"
+                                                  style="text-decoration: none">{{ post.title }}</a></h2>
+                        <p class="post-meta">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;{{ post.pub_time }}&nbsp;&nbsp;
+                            <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;{{ post.views }}次浏览&nbsp;&nbsp;
+                            <i class="fa fa-book"></i>&nbsp;{{ post.category }}&nbsp;&nbsp;
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            {#striptags用于过滤正文中所有的HTML标签#}
+                            {#truncatechars用于截取正文前300个字符#}
+                            {{ post.content|striptags|truncatechars:300 }}
+                        </p>
+                    </div>
+                    <div>
+                        <a class="post-category post-category-design" href="{% url 'post' id=post.id %}"
+                           style="text-decoration: none">阅读全文</a>
+                    </div>
+                </section>
+            </div>
+        {% endfor %}
+    </div><!-- /.blog-post -->
+    {% if article_list.object_list and article_pages.num_pages > 1 %}
+        <div>
+            {% if article_list.has_previous %}
+                <a class="footer" href="?page={{ article_list.previous_page_number }}">
+                    <i class="fa fa-angle-left"></i>&nbsp;&nbsp;上一页
+                </a>
+            {% endif %}
+            {% for i in article_pages.page_range %}
+                {% if article_list.number == i %}
+                    <a href="?page={{ i }}" style="color: #2B333D">{{ i }}</a>
+                {% else %}
+                    <a href="?page={{ i }}">{{ i }}</a>
+                {% endif %}
+            {% endfor %}
+            {% if article_list.has_next %}
+                <a class="footer" href="?page={{ article_list.next_page_number }}">
+                    下一页&nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+                </a>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}

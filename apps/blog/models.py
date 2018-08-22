@@ -57,12 +57,12 @@ class Article(models.Model):
         self.views += 1
         self.save(update_fields=['views'])
     # 下一篇
-    def next_aticle(self):
-        return Article.objects.filter(id__gt=self.id, status='p', pub_time__isnull=False).first()
+    def next_article(self):
+        return Article.objects.filter(id__gt=self.id, status='p', pub_time__isnull=False,).order_by('id').first()
 
     # 上一篇
-    def pre_aticle(self):
-        return Article.objects.filter(id__lt=self.id, status='p', pub_time__isnull=False).first()
+    def pre_article(self):
+        return Article.objects.filter(id__lt=self.id, status='p', pub_time__isnull=False).order_by('-id').first()
 
     class Meta:
         ordering = ['-pub_time']

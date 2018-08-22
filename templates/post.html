@@ -18,21 +18,21 @@
 
                 <div class="post-description">
                     <p>
-                        {{ post.content }}
+                        {{ post.content|safe }}
                     </p>
                 </div>
         </section>
 </div><!-- /.blog-post -->
 <!-- 上下文切换 -->
 <div>
-    {% if pre_aticle %}
-        <a class="footer" href="{% url 'post' id=pre_aticle.id %}" style="text-decoration: none; float: left;">
-            <i class="fa fa-angle-left"></i>&nbsp;&nbsp;上一篇：{{ pre_aticle.title }}
+    {% if pre_article %}
+        <a class="footer" href="{% url 'post' id=pre_article.id %}" style="text-decoration: none; float: left;">
+            <i class="fa fa-angle-left"></i>&nbsp;&nbsp;上一篇：{{ pre_article.title }}
         </a>
     {% endif %}
-    {% if next_aticle %}
-        <a class="footer" href="{% url 'post' id=next_aticle.id %}" style="text-decoration: none; float: right;">
-            下一篇：{{ next_aticle.title }}&nbsp;&nbsp;
+    {% if next_article %}
+        <a class="footer" href="{% url 'post' id=next_article.id %}" style="text-decoration: none; float: right;">
+            下一篇：{{ next_article.title }}&nbsp;&nbsp;
             <i class="fa fa-angle-right"></i>
         </a>
     {% endif %}
