@@ -1,2 +1,2 @@
-# Blog
-# django练习
+ Blog
+ django练习
