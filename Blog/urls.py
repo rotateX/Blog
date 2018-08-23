@@ -19,6 +19,8 @@ from apps.blog import views as blog_views
 from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import url
+from django.views.static import serve
 
 
 urlpatterns = [
@@ -27,10 +29,11 @@ urlpatterns = [
     path('home/', blog_views.home, name='home'),
     path('articles/<int:id>/', blog_views.detail, name='post'),
     path('summernote/', include('django_summernote.urls')),
-    path('archives/<str:year>/<str:month>', blog_views.archives, name='archives')
-    # path('jet/', include('jet.urls', 'jet')),
-    # path('jet/dashboard', include('jet.dashboard.urls', 'jet-dashboard')),
+    path('archives/<str:year>/<str:month>', blog_views.archives, name='archives'),
+    path('category/<str:id>', blog_views.category, name='category'),
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), # 处理 DEBUG = False情况找不到静态资源
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

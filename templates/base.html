@@ -20,14 +20,14 @@
             <h2 class="brand-tagline">多种维生素</h2>
             <br>
             <nav class="nav">
-{#                <ul class="nav-list">#}
-{#                    <li class="nav-item">#}
-{#                        {% for category in category_list %}#}
-{#                            <a class="pure-button" href="{% url 'category_menu' id=category.id %}"#}
-{#                               style="text-decoration: none">{{ category }}</a>#}
-{#                        {% endfor %}&nbsp;#}
-{#                    </li>#}
-{#                </ul>#}
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        {% for category in category_list %}
+                            <a class="pure-button" href="{% url 'category' id=category.id %}"
+                               style="text-decoration: none">{{ category }}</a>
+                        {% endfor %}&nbsp;
+                    </li>
+                </ul>
                 <br>
                 <h3 class="brand-tagline" style="margin: 2%">文章归档</h3>
                 <ul class="nav-list" style="margin: 2%">

@@ -1,7 +1,8 @@
 from django.db import models
 
 from django.utils import timezone as datetime
-now = datetime.now()
+from django.utils.timezone import now
+
 #from django.utils.timezone import utc
 #utcnow = datetime.datetime.utcnow().replace(tzinfo=utc)
 # Create your models here.

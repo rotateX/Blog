@@ -41,7 +41,12 @@ def detail(request, id): # 文章详情
 
     except Article.DoesNotExist:
         raise Http404
-    return render(request, 'post.html', {'post': post, 'tags': tags, 'next_article':next_article, 'pre_article':pre_article})
+    return render(request, 'post.html', {
+        'post': post,
+        'tags': tags,
+        'next_article':next_article,
+        'pre_article':pre_article,
+    })
 
 # 按时间归档文章
 def archives(request, year, month):
@@ -61,5 +66,27 @@ def archives(request, year, month):
         'year_month':year+'年'+month+'月'
 
     })
+
+def category(request, id): # 分类归档
+    article_objs = Article.objects.filter(category_id=str(id), status='p')
+    category = categories.get(id=str(id))
+    paginator = Paginator(article_objs, settings.PAGE_NUM)
+    try:
+        page = request.GET.get('page')
+        article_list = paginator.page(page)
+    except PageNotAnInteger:
+        article_list = paginator.page(1)
+    except EmptyPage:
+        article_list = paginator.page(paginator.num_pages)
+    return render(request, 'category.html', {
+        'article_list':article_list,
+        'category':category,
+        'category_list':categories,
+        'months':months,
+        'paginator':paginator,
+    })
+
+
+
 
 
