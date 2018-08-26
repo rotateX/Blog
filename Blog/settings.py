@@ -31,8 +31,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    # 'jet.dashboard',
-    # 'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.blog',
-    'django_summernote',
+    # 'django_summernote',
+    'mdeditor'
+
 ]
 
 MIDDLEWARE = [
@@ -136,27 +136,9 @@ STATIC_URL = '/static/'
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media/')
 
-# # 富文本编辑器设置
-# SUMMERNOTE_CONFIG = {
-#     # Using SummernoteWidget - iframe mode
-#     'iframe': True,  # or set False to use SummernoteInplaceWidget - no iframe mode
-#
-#     # Using Summernote Air-mode
-#     'airMode': False,
-#
-#     # Use native HTML tags (`<b>`, `<i>`, ...) instead of style attributes
-#     'styleWithSpan': False,
-#
-#     # Change editor size
-#     'width': '80%',
-#     'height': '480',
-#
-#     # Use proper language setting automatically (default)
-#     'lang': 'zh-CN',
-# }
-#
+
 # # 主题
 # JET_THEMES = [
 #     {

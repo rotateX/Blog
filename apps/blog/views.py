@@ -3,6 +3,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import Http404
 from django.conf import settings
 from apps.blog.models import Article, Category, Tag
+import markdown
 
 # Create your views here.
 months = Article.objects.datetimes('pub_time', 'month', order='DESC')
@@ -38,6 +39,11 @@ def detail(request, id): # 文章详情
         tags = post.tag.all()  # 获取文章对应所有标签
         next_article = post.next_article()
         pre_article = post.pre_article()
+        post.content = markdown.markdown(post.content, extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+            'markdown.extensions.toc',
+        ])
 
     except Article.DoesNotExist:
         raise Http404
@@ -46,6 +52,8 @@ def detail(request, id): # 文章详情
         'tags': tags,
         'next_article':next_article,
         'pre_article':pre_article,
+        'months': months,
+        'category_list': categories,
     })
 
 # 按时间归档文章

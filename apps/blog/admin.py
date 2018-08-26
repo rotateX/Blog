@@ -1,6 +1,6 @@
 from django.contrib import admin
 from apps.blog.models import Article, Category, Tag
-from django_summernote.admin import SummernoteModelAdmin
+# from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
 
@@ -16,17 +16,17 @@ class TagAdmin(admin.ModelAdmin):
     list_display = ('name', 'created_time')
 
 
-class PostAdmin(SummernoteModelAdmin):
-    summernote_fields = ('content',)  # 给content字段添加富文本
-    list_display = ('title', 'status', 'pub_time', 'views')
-    list_per_page = 5
-    search_fields = ['title']
-    ordering = ['-pub_time']
+# class PostAdmin(SummernoteModelAdmin):
+#     summernote_fields = ('content',)  # 给content字段添加富文本
+#     list_display = ('title', 'status', 'pub_time', 'views')
+#     list_per_page = 5
+#     search_fields = ['title']
+#     ordering = ['-pub_time']
 
-# admin.site.register(Article, ArticleAdmin)
+admin.site.register(Article, ArticleAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Tag, TagAdmin)
-admin.site.register(Article, PostAdmin)
+# admin.site.register(Article, PostAdmin)
 
 
 

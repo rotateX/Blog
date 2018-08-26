@@ -1,29 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af6e39b3-6eaa-40e3-9989-61b29ab83e6b" name="默认" comment="修改文章详情页，上下篇显示错误问题；&#10;增加按时间归档功能">
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/0dab996f-3f43-4c76-afd3-96e7415ce7bd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/3899285a-dacf-47f0-ab7b-105e446156db.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/3ef92d1a-7ef1-4395-88ae-cdeaa4799fc7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/3f391ce3-8de5-4701-8a80-d1a1f8dbcc60.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/4100bf1c-38c3-4da0-b6b9-4a582a926b81.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/84aea270-19b9-424f-b089-e78bd1048212.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/d1f365ba-6b35-446d-94d2-aa28d69a2970.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/django-summernote/2018-08-22/e778c315-87f6-4447-b051-85815c97d674.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/库.lnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/category.html" afterDir="false" />
+    <list default="true" id="af6e39b3-6eaa-40e3-9989-61b29ab83e6b" name="默认" comment="增加后台富文本编辑器(django-mdeditor)；&#10;增加前台代码高亮(markdown,Pygments);&#10;处理DEBUG=False下，找不到静态资源问题">
+      <change afterPath="$PROJECT_DIR$/static/css/code.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/editormd.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/editormd.logo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/editormd.logo.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/editormd.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/editormd.preview.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/editormd.preview.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/manni.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/monokai.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/native.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/loading@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/loading@3x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-favicon-16x16.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-favicon-24x24.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-favicon-32x32.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-favicon-48x48.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-favicon-64x64.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-114x114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-120x120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-180x180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-240x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-24x24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-320x320.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-48x48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-64x64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/editormd-logo-96x96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logos/vi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/editormd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/editormd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/comment/comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/comment/continuecomment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/dialog/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/dialog/dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/fullscreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/panel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/placeholder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/rulers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/closebrackets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/closetag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/continuelist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/matchbrackets.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/matchtags.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/trailingspace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/brace-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/comment-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/foldcode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/foldgutter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/foldgutter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/indent-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/markdown-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/xml-fold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/css-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/html-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/javascript-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/show-hint.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/show-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/sql-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/xml-hint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/coffeescript-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/css-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/javascript-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/json-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/lint.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/yaml-lint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/merge/merge.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/merge/merge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/loadmode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/multiplex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/multiplex_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/overlay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/colorize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/runmode-standalone.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/runmode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/runmode.node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/annotatescrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/scrollpastend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/simplescrollbars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/simplescrollbars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/match-highlighter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/matchesonscrollbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/matchesonscrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/searchcursor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/selection/active-line.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/selection/mark-selection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/selection/selection-pointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/tern/tern.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/tern/tern.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/tern/worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/wrap/hardwrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/codemirror.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/codemirror.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/lib/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/lib/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/apl/apl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/apl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/asterisk/asterisk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/asterisk/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clike/clike.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clike/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clike/scala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clojure/clojure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clojure/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cobol/cobol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cobol/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/coffeescript/coffeescript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/coffeescript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/commonlisp/commonlisp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/commonlisp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/css.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/less.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/less_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/scss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/scss_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cypher/cypher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cypher/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/d/d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/d/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dart/dart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dart/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/diff/diff.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/diff/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/django/django.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/django/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dockerfile/dockerfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dockerfile/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dtd/dtd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dtd/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dylan/dylan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dylan/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ebnf/ebnf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ebnf/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ecl/ecl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ecl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/eiffel/eiffel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/eiffel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/erlang/erlang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/erlang/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/forth/forth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/forth/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/fortran/fortran.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/fortran/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gas/gas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gas/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gfm/gfm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gfm/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gfm/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gherkin/gherkin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gherkin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/go/go.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/go/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/groovy/groovy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/groovy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haml/haml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haml/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haskell/haskell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haskell/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haxe/haxe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haxe/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlembedded/htmlembedded.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlembedded/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlmixed/htmlmixed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlmixed/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/http/http.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/http/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/idl/idl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/idl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jade/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jade/jade.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/json-ld.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/typescript.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jinja2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jinja2/jinja2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/julia/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/julia/julia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/kotlin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/kotlin/kotlin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/livescript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/livescript/livescript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/lua/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/lua/lua.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/markdown/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/markdown/markdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/markdown/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/meta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mirc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mirc/mirc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mllike/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mllike/mllike.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/modelica/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/modelica/modelica.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/nginx/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/nginx/nginx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ntriples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ntriples/ntriples.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/octave/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/octave/octave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pascal/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pascal/pascal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pegjs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pegjs/pegjs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/perl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/perl/perl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/php/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/php/php.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/php/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pig/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pig/pig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/properties/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/properties/properties.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/puppet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/puppet/puppet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/python/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/python/python.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/q/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/q/q.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/r/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/r/r.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rpm/changes/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rpm/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rpm/rpm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rst/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rst/rst.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ruby/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ruby/ruby.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ruby/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rust/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rust/rust.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sass/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sass/sass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/scheme/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/scheme/scheme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/shell/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/shell/shell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/shell/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sieve/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sieve/sieve.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/slim/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/slim/slim.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/slim/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smalltalk/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smalltalk/smalltalk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smarty/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smarty/smarty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smartymixed/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smartymixed/smartymixed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/solr/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/solr/solr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/soy/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/soy/soy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sparql/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sparql/sparql.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/spreadsheet/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/spreadsheet/spreadsheet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sql/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sql/sql.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stex/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stex/stex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stex/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stylus/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stylus/stylus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tcl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tcl/tcl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/textile/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/textile/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/textile/textile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiddlywiki/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiki/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiki/tiki.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiki/tiki.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/toml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/toml/toml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tornado/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tornado/tornado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/turtle/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/turtle/turtle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vb/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vb/vb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vbscript/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vbscript/vbscript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/velocity/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/velocity/velocity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/verilog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/verilog/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/verilog/verilog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xml/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xml/xml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xquery/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xquery/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xquery/xquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/yaml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/yaml/yaml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/z80/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/z80/z80.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/modes.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/3024-day.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/3024-night.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/ambiance-mobile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/ambiance.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/base16-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/base16-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/blackboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/cobalt.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/colorforth.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/eclipse.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/elegant.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/erlang-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/lesser-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/mbo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/mdn-like.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/midnight.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/monokai.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/neat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/neo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/night.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/paraiso-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/paraiso-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/pastel-on-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/rubyblue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/solarized.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/the-matrix.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/tomorrow-night-bright.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/tomorrow-night-eighties.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/twilight.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/vibrant-ink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/xq-dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/xq-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/zenburn.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/flowchart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/jquery.flowchart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/marked.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/prettify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/raphael.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/sequence-diagram.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/lib/underscore.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/code-block-dialog/code-block-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/emoji-dialog/emoji-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/emoji-dialog/emoji.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/goto-line-dialog/goto-line-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/help-dialog/help-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/help-dialog/help.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/html-entities-dialog/html-entities-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/html-entities-dialog/html-entities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/image-dialog/image-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/link-dialog/link-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/plugin-template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/preformatted-text-dialog/preformatted-text-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/reference-link-dialog/reference-link-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/table-dialog/table-dialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/plugins/test-plugin/test-plugin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/blog/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-    </list>
-    <list id="d1b96ccf-75ea-40ee-8579-1399b276b3b6" name="修改文章详情页，上下篇显示错误问题； 增加按时间归档功能" comment="">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/django-summernote/2018-08-20/01fc7517-b3d0-43ca-b143-317020023367.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/media/django-summernote/2018-08-20/01fc7517-b3d0-43ca-b143-317020023367.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/django-summernote/2018-08-20/9df2117b-1a9e-44ea-9283-fe96506fd32e.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/media/django-summernote/2018-08-20/9df2117b-1a9e-44ea-9283-fe96506fd32e.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/forms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
+    <list id="d1b96ccf-75ea-40ee-8579-1399b276b3b6" name="修改文章详情页，上下篇显示错误问题； 增加按时间归档功能" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +414,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Blog$views.coverage" NAME="views Coverage Results" MODIFIED="1535010944541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/blog" />
-    <SUITE FILE_PATH="coverage/Blog$DEBUG.coverage" NAME="DEBUG Coverage Results" MODIFIED="1535011508467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/blog" />
+    <SUITE FILE_PATH="coverage/Blog$DEBUG.coverage" NAME="DEBUG Coverage Results" MODIFIED="1535279810055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -44,37 +426,41 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.58" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="59" />
-          <entry key="css" value="1" />
-          <entry key="html" value="858" />
-          <entry key="py" value="2061" />
+          <entry key="css" value="2" />
+          <entry key="html" value="929" />
+          <entry key="py" value="2304" />
+          <entry key="txt" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="858" />
-          <entry key="Python" value="2120" />
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="929" />
+          <entry key="PLAIN_TEXT" value="93" />
+          <entry key="Python" value="2363" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="2" />
-          <entry key="html" value="2" />
-          <entry key="py" value="7" />
+          <entry key="css" value="6" />
+          <entry key="html" value="3" />
+          <entry key="ico" value="1" />
+          <entry key="py" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="2" />
-          <entry key="HTML" value="2" />
-          <entry key="Python" value="7" />
+          <entry key="CSS" value="6" />
+          <entry key="HTML" value="3" />
+          <entry key="Image" value="1" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
     </session>
@@ -126,26 +512,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="608">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/post.html">
+        <entry file="file://$PROJECT_DIR$/apps/blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="304">
+              <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
+        <entry file="file://$PROJECT_DIR$/Blog/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="291">
+              <caret line="32" column="91" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
+              <folding>
+                <element signature="e#628#660#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,49 +545,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <state relative-caret-position="-19">
+              <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/blog/views.py">
+        <entry file="file://$PROJECT_DIR$/apps/blog/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1535011505961" expanded="true" signature="403:445" ph="..." />
-                <marker date="1535011505961" expanded="true" signature="468:473" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/category.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="169">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -203,20 +563,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-601">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="495">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/archives.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -245,6 +596,7 @@
       <find>article_objs_list</find>
       <find>category</find>
       <find>favicon.ico</find>
+      <find>favicon</find>
     </findStrings>
     <replaceStrings>
       <replace>Article</replace>
@@ -260,16 +612,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/static/css/grids-responsive-min.css" />
-        <option value="$PROJECT_DIR$/apps/blog/admin.py" />
         <option value="$PROJECT_DIR$/templates/post.html" />
         <option value="$PROJECT_DIR$/templates/archives.html" />
-        <option value="$PROJECT_DIR$/apps/blog/models.py" />
-        <option value="$PROJECT_DIR$/Blog/settings.py" />
-        <option value="$PROJECT_DIR$/Blog/urls.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/category.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/apps/blog/admin.py" />
+        <option value="$PROJECT_DIR$/apps/blog/models.py" />
+        <option value="$PROJECT_DIR$/static/admin/css/forms.css" />
         <option value="$PROJECT_DIR$/apps/blog/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/Blog/urls.py" />
+        <option value="$PROJECT_DIR$/Blog/settings.py" />
       </list>
     </option>
   </component>
@@ -279,11 +632,16 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/static/js/lib/codemirror/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="544" />
-    <option name="y" value="178" />
-    <option name="width" value="1238" />
-    <option name="height" value="820" />
+    <option name="x" value="136" />
+    <option name="y" value="51" />
+    <option name="width" value="1044" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -291,7 +649,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,28 +660,6 @@
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="django-summernote" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
@@ -346,6 +681,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,6 +691,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\pythontest\Blog\static" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -385,14 +726,14 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\pythontest\djangotest\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/blog" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/blog/views.py" />
-      <option name="PARAMETERS" value="runserver 192.168.1.233:8001" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver 192.168.1.102:8001" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -515,10 +856,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="544" y="178" width="1238" height="820" extended-state="0" />
-    <editor active="true" />
+    <frame x="136" y="51" width="1044" height="742" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23259762" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28353658" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32886904" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3223684" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.37993422" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49833333" weight="0.38666666" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50166667" side_tool="true" weight="0.32533333" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4975" weight="0.22910216" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.396" />
+      <window_info anchor="bottom" id="调试" order="13" weight="0.48979592" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23684211" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -540,7 +904,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -588,22 +952,11 @@
     <MESSAGE value="增加详情页面 上下篇链接" />
     <MESSAGE value="修改文章详情页，上下篇显示错误问题；&#10;增加按时间归档功能" />
     <MESSAGE value="修改文章详情页，上下篇显示错误问题； 增加按时间归档功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文章详情页，上下篇显示错误问题； 增加按时间归档功能" />
+    <MESSAGE value="增加后台富文本编辑器(django-mdeditor)；&#10;增加前台代码高亮(markdown,Pygments);&#10;处理DEBUG=False下，找不到静态资源问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加后台富文本编辑器(django-mdeditor)；&#10;增加前台代码高亮(markdown,Pygments);&#10;处理DEBUG=False下，找不到静态资源问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/blog/views.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/apps/blog/views.py</url>
-          <line>86</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -625,37 +978,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/contrib/admin/sites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/contrib/admin/options.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="1990" selection-start-line="1990" selection-end-line="1990" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/contrib/admin/sites.py" />
+    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/contrib/admin/options.py" />
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/db/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/core/handlers/base.py" />
+    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/db/models/base.py" />
     <entry file="file://$PROJECT_DIR$/static/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -674,54 +1003,18 @@
         <state relative-caret-position="-152" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/core/handlers/exception.py">
+    <entry file="file://$PROJECT_DIR$/../djangotest/venv/Lib/site-packages/django/core/handlers/exception.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="20273">
+          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/admin.py">
+    <entry file="file://$PROJECT_DIR$/templates/category.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#628#660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/archives.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-601">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="342">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -734,48 +1027,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
+        <state relative-caret-position="19">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="323">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin/css/forms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/manni.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/archives.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/editormd.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/editormd.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../css/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="34" column="5" selection-start-line="34" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../css/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="140" column="1" selection-start-line="140" selection-end-line="140" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="304">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1535011505961" expanded="true" signature="403:445" ph="..." />
-            <marker date="1535011505961" expanded="true" signature="468:473" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/image/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="32" column="91" selection-start-line="32" selection-start-column="91" selection-end-line="32" selection-end-column="91" />
+          <folding>
+            <element signature="e#628#660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/blog/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>

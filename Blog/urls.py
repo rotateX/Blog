@@ -25,15 +25,18 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('base/', blog_views.base, name='base')
-    path('home/', blog_views.home, name='home'),
+    url(r'^$', blog_views.home, name='home'),
     path('articles/<int:id>/', blog_views.detail, name='post'),
-    path('summernote/', include('django_summernote.urls')),
     path('archives/<str:year>/<str:month>', blog_views.archives, name='archives'),
     path('category/<str:id>', blog_views.category, name='category'),
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), # 处理 DEBUG = False情况找不到静态资源
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'mdeditor/', include('mdeditor.urls')),
+    path('favicon.ico', serve, {'path': 'static/image/favicon.ico'}), # 处理找不到favicon.ico 问题
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+else:
+    urlpatterns += [
+        url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+        url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    ]
