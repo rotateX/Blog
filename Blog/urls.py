@@ -32,7 +32,8 @@ urlpatterns = [
     path('category/<str:id>', blog_views.category, name='category'),
     url(r'mdeditor/', include('mdeditor.urls')),
     path('favicon.ico', serve, {'path': 'static/image/favicon.ico'}), # 处理找不到favicon.ico 问题
-    path('login/', login_views.signin, name='login' )
+    path('login/', login_views.signin, name='login') ,
+    path('register/', login_views.signup, name='register'),
 ]
 # 处理DEBUG = False 下找不到静态资源
 if settings.DEBUG:

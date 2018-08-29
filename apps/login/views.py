@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from apps.login.models import *
 from django.contrib.auth.hashers import make_password, check_password
 from django.db.models import Q
+from apps.login.signupform import signupform
 
 # Create your views here.
 # 用户登录
@@ -45,10 +46,13 @@ def index(request):
 
 
 # 注册用户
-def signup(request, username, password, email):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        email = request.POST('email')
-        UserInfo.objects.create(username=username.strip(), password=make_password(password), email=email.strip(), is_active=False)
-        return render(request, 'signin/signin.html')
+def signup(request):
+    # if request.method == 'POST':
+    #     username = request.POST.get('username')
+    #     password = request.POST.get('password')
+    #     email = request.POST('email')
+    #     UserInfo.objects.create(username=username.strip(), password=make_password(password), email=email.strip(), is_active=False)
+    sform = signupform(request.POST)
+    return render(request, 'signup/register.html', {
+        'form': sform
+    })

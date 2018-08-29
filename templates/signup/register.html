@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href={% static 'signup/css/style.css' %} />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </head>
+
+    <body>
+
+<!-----start-main---->
+        <div class="main">
+            <div class="inset">
+            <div class="social-icons">
+             <div class="span"><a href="#"><img alt="facebook" src={% static 'signup/images/fb.png' %} /><i>Connect with Facebook </i><div class="clear"></div></a></div>
+             <div class="span1"><a href="#"><img alt="twitter" src={% static 'signup/images/t-bird.png' %} /><i>Connect with Twitter</i><div class="clear"></div></a></div>
+             <div class="clear"></div>
+            </div>
+            </div>
+            <h2>Or sign up with</h2>
+            <form  method="post">
+                {% csrf_token %}
+                <div class="lable">
+                    <input type="text" class="text" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" id="active">
+                </div>
+                <div class="clear"></div>
+                <div class="lable-2">
+                    <input type="text" class="text" value="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}">
+                    <input type="text" class="text" value="输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+                    <input type="text" class="text" value="确认密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+                </div>
+                <div class="clear"> </div>
+                <h3>By creating an account, you agree to our
+                    <span>
+                        <a href="#">Terms & Conditions</a>
+                    </span>
+                </h3>
+                <div class="submit">
+                    <input type="submit" onclick="myFunction()" value="Create account" >
+                </div>
+                <div class="clear"> </div>
+                {{ form }}
+            </form>
+         </div>
+<!-----//end-main---->
+
+<!-----start-copyright---->
+        <div class="copy-right">
+            <p>不登录 直接浏览 <a title="hompage" href={% url 'home' %}>博客首页</a></p>
+        </div>
+    </body>
+</html>
+
+
+
+
+
