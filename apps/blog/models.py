@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.timezone import now
 from mdeditor.fields import MDTextField
+
 #from django.utils.timezone import utc
 #utcnow = datetime.datetime.utcnow().replace(tzinfo=utc)
 # Create your models here.
@@ -45,7 +46,7 @@ class Article(models.Model):
     created_time = models.DateTimeField(verbose_name='创建时间', default=now)
     pub_time = models.DateTimeField(verbose_name='发布时间', default=now)
     last_mod_time = models.DateTimeField(verbose_name='修改时间', default=now)
-    category = models.ForeignKey(Category, verbose_name='分类', on_delete=models.CASCADE, blank=False, null=False)
+    category = models.ForeignKey(Category, verbose_name='分类', on_delete=models.CASCADE, blank=False, null=False, related_name='category_set')
     tag = models.ManyToManyField(Tag, verbose_name='标签集合', blank=True)
 
     def __str__(self):

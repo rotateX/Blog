@@ -34,7 +34,7 @@ urlpatterns = [
     path('favicon.ico', serve, {'path': 'static/image/favicon.ico'}), # 处理找不到favicon.ico 问题
     path('login/', login_views.signin, name='login' )
 ]
-
+# 处理DEBUG = False 下找不到静态资源
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 else:
