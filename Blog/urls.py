@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url
 from django.views.static import serve
+from apps.login import views as login_views
 
 
 urlpatterns = [
@@ -31,6 +32,7 @@ urlpatterns = [
     path('category/<str:id>', blog_views.category, name='category'),
     url(r'mdeditor/', include('mdeditor.urls')),
     path('favicon.ico', serve, {'path': 'static/image/favicon.ico'}), # 处理找不到favicon.ico 问题
+    path('login/', login_views.signin, name='login' )
 ]
 
 if settings.DEBUG:
