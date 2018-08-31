@@ -21,16 +21,17 @@
             </div>
             </div>
             <h2>Or sign up with</h2>
-            <form  method="post">
+            <form method="post">
                 {% csrf_token %}
                 <div class="lable">
-                    <input type="text" class="text" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" id="active">
+                    <input type="text" name="username" class="text" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" id="active">
                 </div>
                 <div class="clear"></div>
                 <div class="lable-2">
-                    <input type="text" class="text" value="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}">
-                    <input type="text" class="text" value="输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
-                    <input type="text" class="text" value="确认密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+                    <input type="text" name="email" class="text" value="your@email.com " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your@email.com ';}">
+                    <input type="text" name="password" class="text" value="输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+                    <input type="text" name="confim_p" class="text" value="确认密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password ';}">
+
                 </div>
                 <div class="clear"> </div>
                 <h3>By creating an account, you agree to our
@@ -42,7 +43,6 @@
                     <input type="submit" onclick="myFunction()" value="Create account" >
                 </div>
                 <div class="clear"> </div>
-                {{ form }}
             </form>
          </div>
 <!-----//end-main---->
