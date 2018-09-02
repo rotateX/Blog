@@ -136,7 +136,7 @@ body{
 	border-top: none;
 }
 .lable input[type="text"]:hover,.lable-2 input[type="text"]:hover,input[type="Password"]:hover,#active {
-	color:#DCDCDC;
+	color: rgba(67, 67, 67, 0.81);
 	border-left:6px solid#40A46F;
 }
 .lable-2 input[type="text"],input[type="Password"] { 
@@ -291,42 +291,51 @@ input[type=submit] {
 		text-align: center;
 	}
 }
-@media (max-width:480px){
-	.main{
-		width:90%;
-		margin: 6em auto 0;
-	}
-	.lable input[type="text"],.lable input[type="text"] {
-		width:92%;
-	
-}
-@media (max-width:320px){
+@media (max-width:480px) {
 	.main {
 		width: 90%;
-		margin: 3em auto 0;
+		margin: 6em auto 0;
 	}
-	.span i {
-		font-size: 16px;
+
+	.lable input[type="text"], .lable input[type="text"] {
+		width: 92%;
+
 	}
-	.span1 i {
-		padding: 15px 0px;
-		font-size: 16px;
+
+	@media (max-width: 320px) {
+		.main {
+			width: 90%;
+			margin: 3em auto 0;
+		}
+
+		.span i {
+			font-size: 16px;
+		}
+
+		.span1 i {
+			padding: 15px 0px;
+			font-size: 16px;
+		}
+
+		.lable input[type="text"]:first-child {
+			width: 90%;
+			padding: 13px 10px;
+		}
+
+		.lable input[type="text"], .lable input[type="text"], .lable-2 input[type="text"], .lable-2 input[type="text"] {
+			width: 90%;
+			font-size: 16px;
+			padding: 13px 10px;
+		}
+
+		input[type="Password"] {
+			font-size: 16px;
+			padding: 13px 10px;
+			width: 90%;
+		}
+
+		.main h3 {
+			line-height: 28px;
+		}
 	}
-	.lable input[type="text"]:first-child {
-		width: 90%;
-		padding: 13px 10px;
-	}
-	.lable input[type="text"], .lable input[type="text"],.lable-2 input[type="text"], .lable-2 input[type="text"] { 
-		width: 90%;
-		font-size: 16px;
-		padding:13px 10px;
-	}
-	input[type="Password"] {
-		font-size: 16px;
-		padding:13px 10px;
-		width: 90%;
-	}
-	.main h3 {
-	line-height: 28px;
-	}
-)
+}

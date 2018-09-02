@@ -34,6 +34,8 @@ urlpatterns = [
     path('favicon.ico', serve, {'path': 'static/image/favicon.ico'}), # 处理找不到favicon.ico 问题
     path('login/', login_views.signin, name='login') ,
     path('register/', login_views.signup, name='register'),
+    path('register/successful/', login_views.regs_scf, name='regs_scf'),
+    path(r'activate/', login_views.activate,name='activate'),
 ]
 # 处理DEBUG = False 下找不到静态资源
 if settings.DEBUG:

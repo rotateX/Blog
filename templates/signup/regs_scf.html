@@ -24,27 +24,13 @@
             <form method="post">
                 {% csrf_token %}
 
-                {% if err %}
-                    <div class="alert alert-warning">{{ err }}</div>
-                {% endif %}
                 <div class="lable">
-                    {{ regs_form.username }}{{regs_form.username.errors}}
+                    {{ user }}
                 </div>
-                {% if name_err %}
-                    <div class="alert alert-warning">{{ name_err }}</div>
-                {% endif %}
+
                 <div class="clear"></div>
                 <div class="lable-2">
-                    {{ regs_form.email }}{{regs_form.email.errors}}
-                    {% if email_err %}
-                        <div class="alert alert-warning">{{ email_err }}</div>
-                    {% endif %}
 
-                    {{ regs_form.password }}{{regs_form.password.errors}}
-                    {{ regs_form.confirm_p }}{{regs_form.confirm_p.errors}}
-                    {% if psw_err %}
-                        <div class="alert alert-warning">{{ psw_err }}</div>
-                    {% endif %}
                 </div>
                 <div class="clear"> </div>
                 <h3>By creating an account, you agree to our
