@@ -94,3 +94,4 @@ def activate(request):
 
 def regs_scf(request):
     return render(request, 'signup/regs_scf.html')
+

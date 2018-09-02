@@ -162,6 +162,8 @@ EMAIL_HOST_USER = '2014280870@qq.com'
 EMAIL_HOST_PASSWORD = 'zxcvbnm,'
 DEFAULT_FROM_EMAIL = 'rotateX <rotateX@qq.com>'
 
+
+
 # # 主题
 # JET_THEMES = [
 #     {

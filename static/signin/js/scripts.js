@@ -5,6 +5,7 @@ jQuery(document).ready(function() {
         Fullscreen background
     */
     $.backstretch("/static/signin/img/backgrounds/1.jpg");
+
     
     /*
         Form validation

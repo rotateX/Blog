@@ -47,3 +47,5 @@ class UserInfo(models.Model):
             user.is_active = True
             user.save()
         return '激活成功'
+
+
