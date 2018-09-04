@@ -158,8 +158,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = '2014280870@qq.com'
-EMAIL_HOST_PASSWORD = 'zxcvbnm,'
+EMAIL_HOST_USER = '0000000@qq.com'
+EMAIL_HOST_PASSWORD = '00000'
 DEFAULT_FROM_EMAIL = 'rotateX <rotateX@qq.com>'
 
 
